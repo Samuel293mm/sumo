@@ -755,6 +755,107 @@
             z-index: 1;
         }
 
+        /* ============ SECCIÓN TESTIMONIOS (NUEVO) ============ */
+        .testimonials {
+            padding: var(--section-lg) 0;
+            background: var(--snow-warm);
+            position: relative;
+            z-index: 2;
+        }
+        .testimonials .section-header {
+            text-align: center;
+            margin-bottom: clamp(40px, 6vw, 65px);
+        }
+        .testimonials .section-header h2 {
+            color: var(--deep-teal);
+            margin-bottom: 8px;
+        }
+        .testimonials .section-line {
+            width: 60px;
+            height: 4px;
+            background: var(--purple-light);
+            border-radius: 2px;
+            margin: 0 auto;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: clamp(20px, 2.5vw, 32px);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .testimonial-card {
+            background: #fff;
+            border-radius: var(--radius-lg);
+            padding: clamp(28px, 4vw, 40px);
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+            position: relative;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+        }
+        .testimonial-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 16px;
+        }
+        .testimonial-stars svg {
+            width: 20px;
+            height: 20px;
+            fill: #f59e0b;
+        }
+        .testimonial-text {
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--purple-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        .testimonial-name {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+        .testimonial-role {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: -2px;
+        }
+        @media (max-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                max-width: 450px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
         /* ============ SECCIÓN CURSOS + FORMULARIO ============ */
         .courses-section {
             padding: var(--section-lg) 0;
@@ -1451,7 +1552,7 @@
         </div>
     </section>
 
-    <!-- ==================== SECCIÓN ESTADÍSTICAS Y CERTIFICACIÓN (ACTUALIZADO CON TRUST BADGE) ==================== -->
+    <!-- ==================== SECCIÓN ESTADÍSTICAS Y CERTIFICACIÓN ==================== -->
     <section class="trust-stats reveal">
         <div class="container">
             <div class="stats-grid">
@@ -1506,6 +1607,76 @@
                     <p class="director-role">Director de la Academia</p>
                     <p>Líder visionario que ha llevado a dos equipos distintos a representar al Estado Miranda en eventos nacionales de robótica, forjando campeones con disciplina y creatividad.</p>
                     <span class="director-badge">🏅 Representante Estadal – Estado Miranda</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN TESTIMONIOS (NUEVO) ==================== -->
+    <section class="testimonials reveal" id="testimonios">
+        <div class="container-narrow">
+            <div class="section-header">
+                <h2>Lo que Dicen los Padres</h2>
+                <div class="section-line"></div>
+                <p style="margin-top:10px;color:var(--text-light);">Historias reales de familias que confían en nosotros</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Testimonio 1 (Padre/Madre) -->
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <p class="testimonial-text">“Mi hijo pasó de no saber nada de robótica a diseñar su propio robot en 3 meses. Su confianza y habilidades han mejorado increíblemente.”</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MC</div>
+                        <div>
+                            <div class="testimonial-name">María C.</div>
+                            <div class="testimonial-role">Madre de Alejandro (12 años)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 (Padre/Madre) -->
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <p class="testimonial-text">“La academia no solo enseña tecnología, sino que fomenta el trabajo en equipo y la creatividad. Mi hija ya está pensando en estudiar ingeniería.”</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JR</div>
+                        <div>
+                            <div class="testimonial-name">José R.</div>
+                            <div class="testimonial-role">Padre de Valeria (15 años)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 (Participante) -->
+                <div class="testimonial-card reveal reveal-delay-3">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <p class="testimonial-text">“Representé a mi estado en la ORC Nacional gracias a la preparación y estrategia de Pixel & Protón. ¡Fue una experiencia increíble que marcó mi futuro!”</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">CM</div>
+                        <div>
+                            <div class="testimonial-name">Carlos M.</div>
+                            <div class="testimonial-role">Participante (16 años)</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1587,7 +1758,7 @@
         </div>
     </section>
 
-    <!-- ==================== SECCIÓN SUMO (OPTIMIZADA CON URGENCIA Y ESCASEZ) ==================== -->
+    <!-- ==================== SECCIÓN SUMO ==================== -->
     <section class="sumo-section" id="sumo">
         <div class="container-narrow">
             <div class="sumo-content reveal">
@@ -1597,7 +1768,7 @@
                     <img src="images/banner-text.png" alt="1era Competencia de SUMO - Pixel & Protón" class="sumo-banner-img">
                 </div>
 
-                <!-- BANNER DE URGENCIA Y ESCASEZ (NUEVO) -->
+                <!-- BANNER DE URGENCIA Y ESCASEZ -->
                 <div style="background: linear-gradient(135deg, #f59e0b, #f97316); padding: 8px 18px; border-radius: 50px; display: inline-block; margin-bottom: 20px; font-weight: 700; color: #000; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);">
                     ⚠️ ¡ÚLTIMOS DÍAS! Cupos limitados para esta edición.
                 </div>
@@ -1654,7 +1825,7 @@
                     <strong style="color: #ffffff;">Formato:</strong> Rondas Clasificatorias, Repechaje y Gran Final. ¡Incluye Trivia de Conocimientos y Premio del Pueblo a la Creatividad!
                 </div>
 
-                <!-- Botón de Acción (Google Forms - Se mantiene igual) -->
+                <!-- Botón de Acción (Google Forms) -->
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScVIT6MAkHo0s6z-0B6X8tzrlmx1329d82YK7STiyDDcfs1SA/viewform?usp=publish-editor"
                 target="_blank"
                 rel="noopener noreferrer"
